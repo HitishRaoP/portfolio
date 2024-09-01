@@ -1,0 +1,1 @@
+export { SkillDescription } from "./skill-description"
