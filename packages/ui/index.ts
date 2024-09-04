@@ -30,7 +30,6 @@ export {
   DialogTitle,
   DialogDescription,
 } from "./src/components/dialog"
-export { RadialChartText } from "./src/components/radial-chart-text"
 export {
   ChartContainer,
   ChartTooltip,
@@ -55,3 +54,4 @@ export {
   SheetDescription,
 } from "./src/components/sheet"
 export { ScrollArea, ScrollBar } from "./src/components/scroll-area"
+export { Progress } from "./src/components/progress"

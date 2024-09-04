@@ -12,7 +12,7 @@ import { Logo } from '../components/logo/logo'
 
 export const Skills = () => {
   return (
-    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4'>
+    <div className='grid grid-cols-1 mt-[-8px] sm:mt-0 sm:grid-cols-2 lg:grid-cols-4'>
       {skills.map((skill, index) => {
         return (
           <Dialog key={index}>
@@ -35,11 +35,7 @@ export const Skills = () => {
               <SkillDescription
                 description={skill.description}
                 level={skill.level}
-                usage={skill.usage}
-                lBarColor={skill.lBarColor}
-                lTextColor={skill.lTextColor}
-                uBarColor={skill.uBarColor}
-                uTextColor={skill.uTextColor} />
+                usage={skill.usage} />
             </DialogContent>
           </Dialog>
         )

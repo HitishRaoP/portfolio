@@ -1,10 +1,10 @@
 import type { Config } from "tailwindcss";
-const svgToDataUri = require("mini-svg-data-uri"); 
+const svgToDataUri = require("mini-svg-data-uri");
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
- 
- const config: Config = {
+
+const config: Config = {
   darkMode: ["class"],
   content: [
     './pages/**/*.{ts,tsx}',
@@ -79,8 +79,8 @@ const {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"),  
-    function ({ matchUtilities, theme }: any) {
+  plugins: [require("tailwindcss-animate"),
+  function ({ matchUtilities, theme }: any) {
     matchUtilities(
       {
         "bg-grid": (value: any) => ({

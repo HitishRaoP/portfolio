@@ -17,10 +17,11 @@ export const IconButton = (
         <Button variant={"outline"} asChild>
             <div className='flex gap-4'>
                 {
-                    logo === "Github" ? <Image alt="Github"  className='justify-self-start text-start' src="/github.svg" width={20} height={20} /> :
-                        <Image alt="Globe" className='justify-self-start' src="/globe.svg" width={20} height={20} />
+                    logo === "Github" ?
+                        <Image alt="Github" src="/github.svg" width={20} height={20} /> :
+                        <Image alt="Globe" src="/globe.svg" width={20} height={20} />
                 }
-                <Link className='text-sm md:text-md' href={href}>
+                <Link className='text-sm md:text-md hidden sm:flex' href={href}>
                     {text}
                 </Link>
             </div>
