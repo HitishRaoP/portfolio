@@ -1,8 +1,10 @@
+"use client"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '../components/card'
 import { Logo } from '../components/logo/logo'
 import Link from 'next/link'
 import { cn } from '@portfolio/lib'
 import { Button } from '../components/button'
+import toast, { Toaster } from "react-hot-toast";
 
 const contacts = [
   {
@@ -50,9 +52,22 @@ const contacts = [
 ]
 
 
+
+const handleCopy = (text: string) => {
+  navigator.clipboard.writeText(text);
+  toast.success("Copied!", {
+    style: {
+      backgroundColor: "#0072F5",
+      color: "white"
+    }
+  })
+}
+
 export const Contact = () => {
+
   return (
-    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'>
+    <div className='grid grid-cols-1 mt-[-8px] sm:mt-0 sm:grid-cols-2 lg:grid-cols-3'>
+      <Toaster />
       {
         contacts.map((contact, index) => {
           return (
@@ -67,7 +82,11 @@ export const Contact = () => {
               </CardContent>
               <CardFooter>
                 <Button className='border w-full sm:text-center p-4 font-bold rounded-full' variant={"outline"} asChild>
-                  <Link href={contact.src} className='flex gap-1'><span className='flex'> Follow me</span><span className='hidden sm:flex'>on {contact.name}</span></Link>
+                  {
+                    contact.name === "Gmail" ?
+                      <Button variant={"outline"} onClick={() => handleCopy("hitishraop@gmail.com")}>Copy</Button> :
+                      <Link href={contact.src} className='flex gap-1'><span className='flex'> Follow me</span><span className='hidden sm:flex'>on {contact.name}</span></Link>
+                  }
                 </Button>
               </CardFooter>
             </Card>

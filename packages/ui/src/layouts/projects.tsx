@@ -4,17 +4,17 @@ import { ScrollArea } from '../components/scroll-area'
 
 const projects = [
   {
-    name: "chartlo.app",
+    name: "Chartlo",
     description: "Chartlo is a web application that allows users to create interactive and customizable charts with ease. It offers a range of chart types and customization options, making it ideal for both developers and non-technical users. Built using modern web technologies, it ensures a seamless user experience.",
-    src: "", // If you have a demo or live link, you can add it here
-    github: "https://github.com/HitishRaoP/chartlo",
+    src: "https://chartloapp-hitishs-projects-79b69705.vercel.app/",
+    github: "https://github.com/HitishRaoP/chartlo.app",
     className: "bg-gradient-to-tr from-black via-[#20213B] to-black",
   },
   {
-    name: "Amazon Scrapper",
-    description: "The Amazon Scrapper is a powerful tool designed to extract detailed product information from Amazon. It efficiently gathers data such as product names, prices, images, and more, making it invaluable for market analysis and competitive research. This project showcases my skills in web scraping and data processing.",
-    src: "", // If you have a demo or live link, you can add it here
-    github: "https://github.com/HitishRaoP/chartlo",
+    name: "Scrapify",
+    description: "Scrapify is a powerful tool designed to extract detailed product information from Amazon. It efficiently gathers data such as product names, prices, images, and more, making it invaluable for market analysis and competitive research. This project showcases my skills in web scraping and data processing.",
+    src: "https://scrapify-frontend.vercel.app/",
+    github: "https://github.com/HitishRaoP/scrapify",
     className: "bg-gradient-to-tr from-black via-[#3D1026] to-black"
   }
 ]
@@ -34,13 +34,13 @@ export const Projects = () => {
                 </CardHeader>
                 <CardContent>
                   <ScrollArea className='h-40 lg:h-32'>
-                  <p className=' text-neutral-400 leading-relaxed text-sm md:text-md font-mono text-pretty'>{project.description}</p>
+                    <p className=' text-neutral-400 leading-relaxed text-sm md:text-md font-mono text-pretty'>{project.description}</p>
                   </ScrollArea>
                 </CardContent>
               </Card>
-              <div className='w-full flex flex-col gap-4 lg:gap-0 lg:flex-row justify-between p-10 md:p-12'>
-                <IconButton logo="Globe" href={project.src} text="Hosted Version" />
-                <IconButton logo="Github" href={project.github} text="Source Code" />
+              <div className='w-full flex justify-between p-10 md:p-12'>
+                <IconButton logo="Globe" href={project.src} text="Visit" />
+                <IconButton logo="Github" href={project.github} text="Code" />
               </div>
             </div>
           )

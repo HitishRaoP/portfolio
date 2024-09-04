@@ -3,7 +3,7 @@ import { InfoCard } from "../components/info-card"
 
 export const Home = () => {
   return (
-    <div className="border">
+    <div className="border mt-[-8px] sm:mt-0">
       <div className="border-b px-8 md:px-0">
         <div className="text-3xl md:text-5xl text-center pt-24 font-bold leading-normal">
           <span className="bg-gradient-to-r from-yellow-400 via-orange-600 to-red-500 text-transparent bg-clip-text">
