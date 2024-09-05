@@ -33,8 +33,8 @@ export const Projects = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ScrollArea className='h-40 lg:h-32'>
-                    <p className=' text-neutral-400 leading-relaxed text-sm md:text-md font-mono text-pretty'>{project.description}</p>
+                  <ScrollArea className='h-40 sm:h-32'>
+                    <p className=' text-neutral-400 leading-relaxed text-sm md:text-base text-pretty'>{project.description}</p>
                   </ScrollArea>
                 </CardContent>
               </Card>
